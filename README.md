@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # codigoark
 
 ## Project setup
@@ -32,3 +33,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# codigoarkweb
+>>>>>>> aa22f550939605520216cbf0323e6ed14f6b207a
