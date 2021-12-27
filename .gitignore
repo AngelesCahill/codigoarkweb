@@ -1,9 +1,10 @@
 .DS_Store
 src/config/configFirebase.js
-dist
+
 node_modules
 /tests/e2e/videos/
 /tests/e2e/screenshots/
+
 
 
 # local env files
