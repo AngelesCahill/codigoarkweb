@@ -21,46 +21,6 @@
                 <b-nav-item href="#">
                     <router-link class="nav-link ml-3" aria-current="page" to="/administracion"><span class="paginas"></span></router-link>
                 </b-nav-item>
-                <b-nav-item href="#">
-                    <span>
-                        <template>
-                            <div class="py-2 px-2">
-                                <b-button v-b-toggle.sidebar-right variant="danger">Contactanos</b-button>
-                                <b-sidebar id="sidebar-right" title="CodigoArk" right shadow>
-                                    <div class="px-3 py-2">
-                                        <p class="msg-contactanos">
-                                                Envianos un mensaje y te contactaremos lo antes posible!!
-                                        </p>
-
-                                    <form @submit.prevent="contactar">
-                                        <div class="form-group">
-                                            <label for="exampleInputNombre1">Nombre</label>
-                                            <input type="text" class="form-control" id="exampleInputNombre1" v-model="nombre" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Email</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="mail" required>
-                                        </div>
-                                                                    
-                                        <div class="form-group">
-                                            <label for="exampleCheck1">Celular</label>
-                                            <input type="text" class="form-control" id="exampleCheck1" v-model="telefono" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="exampleFormControlTextarea1">Mensaje</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" v-model="mensaje"></textarea>
-                                        </div>
-
-                                        <button type="submit" class="btn btn-success mt-3 ml-5">Enviar</button>
-                                    </form>
-                                    </div>
-                                </b-sidebar>
-                            </div>
-                        </template>
-                    </span>
-                </b-nav-item>
             </b-navbar-nav>
             </b-collapse>
         </b-navbar>
@@ -99,7 +59,7 @@ export default {
             });
         },
 
-            contactar(){
+    contactar(){
       if (this.nombre.length > 2 && this.telefono && this.mail && this.mensaje) {
         let datos = {
           telefono: this.telefono,
